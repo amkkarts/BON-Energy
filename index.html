@@ -15,7 +15,7 @@
   <meta property="og:description"
     content="Compact electric mini excavators powered by Lithium-ion LFP battery technology.">
   <meta property="og:type" content="website">
-  <meta property="og:image" content="assets/hero-excavator.jpg">
+  <meta property="og:image" content="assets/images/hero-excavator.jpg">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -31,11 +31,12 @@
         <span class="brand-energy">ENERGY</span>
       </a>
 
-      <button class="menu-toggle" aria-label="Open navigation" aria-expanded="false">
+      <button class="menu-toggle" type="button" aria-controls="primary-navigation" aria-label="Open navigation"
+        aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
 
-      <nav class="main-nav" aria-label="Primary navigation">
+      <nav class="main-nav" id="primary-navigation" aria-label="Primary navigation">
         <a class="active" href="#home">Home</a>
         <a href="#machines">Machines</a>
         <a href="#technology">Technology</a>
@@ -52,7 +53,8 @@
   <main>
     <section class="hero" id="home">
       <div class="hero-media">
-        <img src="assets/hero-bg.png" alt="BON electric mini excavator working on a compact worksite">
+        <img fetchpriority="high" decoding="async" src="assets/images/hero-bg.webp"
+          alt="BON electric mini excavator working on a compact worksite">
       </div>
       <div class="hero-overlay"></div>
       <div class="container hero-content">
@@ -98,7 +100,6 @@
         </div>
         <div class="about-visual">
           <div class="forest-panel">
-            <!-- <span>Powered by</span> -->
             <strong>SUSTAINABLE <br> POWER FOR A <br>BRIGHTER TOMORROW
             </strong>
           </div>
@@ -118,7 +119,7 @@
 
         <div class="product-grid">
           <article class="product-card">
-            <div class="product-image"><img src="assets/product-img.png"
+            <div class="product-image"><img loading="lazy" decoding="async" src="assets/images/product-img.webp"
                 alt="BON E-1.0 1 ton class electric mini excavator"></div>
             <div class="product-body">
               <div class="class-label">1 Ton Class</div>
@@ -129,7 +130,7 @@
           </article>
 
           <article class="product-card">
-            <div class="product-image"><img src="assets/product-img.png"
+            <div class="product-image"><img loading="lazy" decoding="async" src="assets/images/product-img.webp"
                 alt="BON E-1.5 1.5 ton class electric mini excavator"></div>
             <div class="product-body">
               <div class="class-label">1.5 Ton Class</div>
@@ -140,7 +141,7 @@
           </article>
 
           <article class="product-card">
-            <div class="product-image"><img src="assets/product-img.png"
+            <div class="product-image"><img loading="lazy" decoding="async" src="assets/images/product-img.webp"
                 alt="BON E-2.0 2 ton class electric mini excavator"></div>
             <div class="product-body">
               <div class="class-label">2 Ton Class</div>
@@ -153,31 +154,6 @@
         </div>
       </div>
     </section>
-
-    <!-- <section class="powertrain section dark-section" id="technology">
-      <div class="container">
-        <div class="eyebrow light">Our Technology</div>
-        <h2>A Smarter Electric Powertrain</h2>
-        <p class="section-intro">The BMS, controller and electric drive system are presented as an integrated
-          architecture around Lithium-ion LFP battery technology.</p>
-
-        <div class="power-flow">
-          <div class="power-node"><span class="node-icon">▣</span><strong>LFP BATTERY</strong><small>Lithium-ion
-              LFP</small></div>
-          <span class="flow-arrow">→</span>
-          <div class="power-node"><span class="node-icon">◈</span><strong>BMS</strong><small>Protection +
-              monitoring</small></div>
-          <span class="flow-arrow">→</span>
-          <div class="power-node"><span class="node-icon">▦</span><strong>CONTROLLER</strong><small>Power
-              management</small></div>
-          <span class="flow-arrow">→</span>
-          <div class="power-node"><span class="node-icon">⚙</span><strong>ELECTRIC DRIVE</strong><small>Motor +
-              hydraulics</small></div>
-        </div>
-        <div class="power-caption">Quiet, zero-tailpipe-emission electric powertrain</div>
-        <a href="#technology-highlights" class="btn btn-primary">Learn More About Our Technology <span>→</span></a>
-      </div>
-    </section> -->
     <section class="powertrain section dark-section" id="technology">
       <div class="container">
 
@@ -330,26 +306,92 @@
 
       </div>
     </section>
-    <section class="tech-highlights section" id="technology-highlights">
+    <section class="tech-highlights section" id="technology-highlights" aria-labelledby="tech-title">
       <div class="container">
-        <div class="eyebrow">Technology Highlights</div>
+        <div class="tech-header">
+          <div>
+            <div class="eyebrow">Technology Highlights</div>
+            <h2 id="tech-title">Electric technology,<br><span>built around the machine.</span></h2>
+          </div>
+          <p class="tech-header-copy">
+            Every BON system is designed as part of one electric architecture — from the battery and control system to
+            the drive and the operator experience.
+          </p>
+        </div>
+
         <div class="feature-grid">
-          <article><span class="feature-icon">▣</span>
-            <h3>LFP Battery System</h3>
-            <p>Stable lithium-ion chemistry with a strong focus on safety, durability and usable energy.</p>
+          <article class="feature-card">
+            <div class="feature-card-top">
+              <span class="feature-number">01</span>
+              <span class="feature-icon" aria-hidden="true">
+                <svg viewBox="0 0 48 48">
+                  <rect x="9" y="8" width="30" height="32" rx="4" />
+                  <path d="M17 15h14M17 21h14M17 27h8M31 20v10M28 25h6" />
+                </svg>
+              </span>
+            </div>
+            <div class="feature-card-body">
+              <h3>LFP Battery System</h3>
+              <p>Stable lithium-ion chemistry with a strong focus on safety, durability and usable energy.</p>
+            </div>
+            <span class="feature-card-arrow" aria-hidden="true">↗</span>
           </article>
-          <article><span class="feature-icon">⚙</span>
-            <h3>Electric Drive</h3>
-            <p>Electric powertrain architecture designed for responsive control and low-noise operation.</p>
+
+          <article class="feature-card">
+            <div class="feature-card-top">
+              <span class="feature-number">02</span>
+              <span class="feature-icon" aria-hidden="true">
+                <svg viewBox="0 0 48 48">
+                  <circle cx="24" cy="24" r="15" />
+                  <circle cx="24" cy="24" r="5" />
+                  <path d="M24 9v7M24 32v7M9 24h7M32 24h7M13.5 13.5l5 5M29.5 29.5l5 5M34.5 13.5l-5 5M18.5 29.5l-5 5" />
+                </svg>
+              </span>
+            </div>
+            <div class="feature-card-body">
+              <h3>Electric Drive</h3>
+              <p>Electric powertrain architecture designed for responsive control and low-noise operation.</p>
+            </div>
+            <span class="feature-card-arrow" aria-hidden="true">↗</span>
           </article>
-          <article><span class="feature-icon">▤</span>
-            <h3>Smart Control</h3>
-            <p>Digital monitoring and machine controls can provide clear information on battery state and operating
-              status.</p>
+
+          <article class="feature-card">
+            <div class="feature-card-top">
+              <span class="feature-number">03</span>
+              <span class="feature-icon" aria-hidden="true">
+                <svg viewBox="0 0 48 48">
+                  <rect x="10" y="10" width="28" height="28" rx="3" />
+                  <rect x="17" y="17" width="14" height="14" rx="2" />
+                  <path
+                    d="M17 5v6M24 5v6M31 5v6M17 37v6M24 37v6M31 37v6M5 17h6M5 24h6M5 31h6M37 17h6M37 24h6M37 31h6" />
+                </svg>
+              </span>
+            </div>
+            <div class="feature-card-body">
+              <h3>Smart Control</h3>
+              <p>Digital monitoring and machine controls can provide clear information on battery state and operating
+                status.</p>
+            </div>
+            <span class="feature-card-arrow" aria-hidden="true">↗</span>
           </article>
-          <article><span class="feature-icon">◖</span>
-            <h3>Low-Noise Operation</h3>
-            <p>Suitable for environments where reduced noise and tailpipe emissions are valuable.</p>
+
+          <article class="feature-card">
+            <div class="feature-card-top">
+              <span class="feature-number">04</span>
+              <span class="feature-icon" aria-hidden="true">
+                <svg viewBox="0 0 48 48">
+                  <path d="M9 27c5-9 11-13 18-13 5 0 9 2 12 6" />
+                  <path d="M10 34h28" />
+                  <path d="M17 34v-6M24 34V22M31 34v-8" />
+                  <circle cx="24" cy="14" r="2" />
+                </svg>
+              </span>
+            </div>
+            <div class="feature-card-body">
+              <h3>Low-Noise Operation</h3>
+              <p>Suitable for environments where reduced noise and tailpipe emissions are valuable.</p>
+            </div>
+            <span class="feature-card-arrow" aria-hidden="true">↗</span>
           </article>
         </div>
       </div>
@@ -365,32 +407,36 @@
           <a href="#applications" class="text-link">View All Applications →</a>
         </div>
         <div class="application-grid">
-          <article class="application-card"><img src="assets/construction-application.png"
-              alt="Construction application">
+          <article class="application-card"><img loading="lazy" decoding="async"
+              src="assets/images/construction-application.webp" alt="Construction application">
             <div>
               <h3>Construction</h3>
               <p>Foundation work, trenching, site preparation and compact civil works.</p>
             </div>
           </article>
-          <article class="application-card"><img src="assets/landscaping.png" alt="Landscaping application">
+          <article class="application-card"><img loading="lazy" decoding="async" src="assets/images/landscaping.webp"
+              alt="Landscaping application">
             <div>
               <h3>Landscaping</h3>
               <p>Garden development, soil work, grading and material handling.</p>
             </div>
           </article>
-          <article class="application-card"><img src="assets/agriculture.png" alt="Agriculture application">
+          <article class="application-card"><img loading="lazy" decoding="async" src="assets/images/agriculture.webp"
+              alt="Agriculture application">
             <div>
               <h3>Agriculture</h3>
               <p>Farm maintenance, drainage, digging and utility preparation.</p>
             </div>
           </article>
-          <article class="application-card"><img src="assets/urban-utility.png" alt="Urban and utility application">
+          <article class="application-card"><img loading="lazy" decoding="async" src="assets/images/urban-utility.webp"
+              alt="Urban and utility application">
             <div>
               <h3>Urban / Utility</h3>
               <p>Cable, pipe and maintenance work where access and noise matter.</p>
             </div>
           </article>
-          <article class="application-card"><img src="assets/indoor.png" alt="Indoor and low-noise application">
+          <article class="application-card"><img loading="lazy" decoding="async" src="assets/images/indoor.webp"
+              alt="Indoor and low-noise application">
             <div>
               <h3>Indoor / Low-Noise</h3>
               <p>Selected indoor or noise-sensitive applications, subject to site ventilation and safety requirements.
@@ -401,58 +447,100 @@
       </div>
     </section>
 
-    <section class="why section" id="why-bon">
+    <section class="why section" id="why-bon" aria-labelledby="why-title">
       <div class="container">
-        <div class="eyebrow">Why BON Energy</div>
-        <h2>A Better Way to Build</h2>
+        <div class="why-header">
+          <div>
+            <div class="eyebrow">Why BON Energy</div>
+            <h2 id="why-title">A Better Way to Build</h2>
+          </div>
+          <div class="why-statement" aria-hidden="true">
+            A CLEANER<br>GREENER<br>SMARTER<br>TOGETHER.
+          </div>
+        </div>
+
         <div class="why-grid">
-          <article><span>01</span>
-            <h3>Electric-first engineering</h3>
-            <p>A machine platform developed around electric power rather than adapting a conventional diesel narrative.
-            </p>
+          <article class="why-card">
+            <div class="why-card-top">
+              <span class="why-icon" aria-hidden="true">
+                <svg viewBox="0 0 48 48">
+                  <path d="M24 39C12 33 8 25 10 17c8-2 16 1 20 7 2 4 1 9-1 13" />
+                  <path d="M14 16c8 5 12 10 16 20" />
+                  <path d="M30 28c3-7 8-10 13-10 1 6-2 11-8 13" />
+                </svg>
+              </span>
+              <span class="why-label">Sustainability</span>
+            </div>
+            <h3>Cleaner by design</h3>
+            <p>Reducing emissions for a cleaner, greener future.</p>
           </article>
-          <article><span>02</span>
-            <h3>Compact productivity</h3>
-            <p>Small machine sizes intended to access areas where conventional equipment can be difficult to operate.
-            </p>
+
+          <article class="why-card">
+            <div class="why-card-top">
+              <span class="why-icon" aria-hidden="true">
+                <svg viewBox="0 0 48 48">
+                  <circle cx="24" cy="10" r="4" />
+                  <circle cx="11" cy="24" r="4" />
+                  <circle cx="37" cy="24" r="4" />
+                  <circle cx="24" cy="38" r="4" />
+                  <path d="M21 13l-7 8M27 13l7 8M14 26l7 9M34 26l-7 9" />
+                </svg>
+              </span>
+              <span class="why-label">Innovation</span>
+            </div>
+            <h3>Technology with purpose</h3>
+            <p>Advancing electric technology for real-world impact.</p>
           </article>
-          <article><span>03</span>
-            <h3>LFP battery platform</h3>
-            <p>Lithium-ion LFP battery technology at the heart of the product range.</p>
+
+          <article class="why-card">
+            <div class="why-card-top">
+              <span class="why-icon" aria-hidden="true">
+                <svg viewBox="0 0 48 48">
+                  <path d="M24 6l15 6v11c0 9-6 16-15 20-9-4-15-11-15-20V12l15-6z" />
+                  <path d="M17 24l5 5 10-12" />
+                </svg>
+              </span>
+              <span class="why-label">Reliability</span>
+            </div>
+            <h3>Built to perform</h3>
+            <p>Built to perform day after day.</p>
           </article>
-          <article><span>04</span>
-            <h3>Application flexibility</h3>
-            <p>Multiple machine capacities and attachment options can support different customer requirements.</p>
+
+          <article class="why-card">
+            <div class="why-card-top">
+              <span class="why-icon" aria-hidden="true">
+                <svg viewBox="0 0 48 48">
+                  <circle cx="17" cy="16" r="5" />
+                  <circle cx="32" cy="18" r="4" />
+                  <path d="M8 36c0-7 4-11 9-11s9 4 9 11M27 36c0-5 3-9 7-9 4 0 6 3 6 9" />
+                </svg>
+              </span>
+              <span class="why-label">People</span>
+            </div>
+            <h3>Made for people</h3>
+            <p>Supporting operators, businesses and communities.</p>
           </article>
-          <article><span>05</span>
-            <h3>Serviceability</h3>
-            <p>Service support, spare parts, warranty and battery support should be clearly explained.</p>
+
+          <article class="why-card">
+            <div class="why-card-top">
+              <span class="why-icon" aria-hidden="true">
+                <svg viewBox="0 0 48 48">
+                  <path d="M18 26l-5 5a5 5 0 0 1-7-7l7-7a5 5 0 0 1 7 0l2 2" />
+                  <path d="M30 22l5-5a5 5 0 0 1 7 7l-7 7a5 5 0 0 1-7 0l-2-2" />
+                  <path d="M17 31l14-14" />
+                </svg>
+              </span>
+              <span class="why-label">Partnership</span>
+            </div>
+            <h3>Better together</h3>
+            <p>Working together for a more sustainable tomorrow.</p>
           </article>
         </div>
       </div>
     </section>
-
-    <!-- <section class="service dark-section section" id="service">
-      <div class="service-bg"><img src="assets/service.jpg" alt="" aria-hidden="true"></div>
-      <div class="container service-inner">
-        <div>
-          <div class="eyebrow light">Service &amp; Support</div>
-          <h2>We're With You<br>Beyond the Machine</h2>
-          <p>Service support, spare parts, warranty and battery support to help keep your operations running. Details to
-            be finalized.</p>
-          <a href="#contact" class="btn btn-primary">Talk to an Expert<span>→</span></a>
-        </div>
-        <div class="service-items">
-          <div><span>⚙</span><strong>Service Support</strong></div>
-          <div><span>▣</span><strong>Spare Parts</strong></div>
-          <div><span>✓</span><strong>Warranty Support</strong></div>
-          <div><span>▤</span><strong>Battery Support</strong></div>
-        </div>
-      </div>
-    </section> -->
     <section class="service dark-section section" id="service">
       <div class="service-bg">
-        <img src="assets/service-support-bg.png" alt="" aria-hidden="true">
+        <img loading="lazy" decoding="async" src="assets/images/service-support-bg.webp" alt="" aria-hidden="true">
       </div>
       <div class="service-overlay"></div>
       <div class="container service-inner">
@@ -563,7 +651,7 @@
 
     <section class="contact" id="contact">
       <div class="contact-image">
-        <img src="assets/contact-bg.png" alt="BON electric mini excavator">
+        <img loading="lazy" decoding="async" src="assets/images/contact-bg.webp" alt="BON electric mini excavator">
         <div class="contact-image-overlay">
           <span>Let's Build</span>
           <strong>A Cleaner<br>Tomorrow<br>Together.</strong>
