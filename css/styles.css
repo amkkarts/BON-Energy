@@ -64,6 +64,11 @@ textarea {
     padding: 78px 0
 }
 
+.gray-bg {
+    background: var(--soft);
+    height: 84px;
+}
+
 .eyebrow {
     text-transform: uppercase;
     letter-spacing: .16em;
@@ -982,7 +987,6 @@ p {
 }
 
 .applications {
-    padding-bottom: 50px;
     background: #fff
 }
 
@@ -994,6 +998,7 @@ p {
 
 .application-card {
     height: 410px;
+    border-radius: 8px;
     position: relative;
     overflow: hidden;
     background: #172b32;
