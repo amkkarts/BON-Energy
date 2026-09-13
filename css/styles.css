@@ -982,12 +982,13 @@ p {
 }
 
 .applications {
+    padding-bottom: 50px;
     background: #fff
 }
 
 .application-grid {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(6, 1fr);
     gap: 13px
 }
 
