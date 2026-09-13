@@ -24,7 +24,8 @@ body {
     font-family: Inter, Arial, sans-serif;
     color: var(--ink);
     background: #fff;
-    line-height: 1.55
+    line-height: 1.55;
+    overflow-x: hidden
 }
 
 /* Anchor navigation offset for sticky header */
@@ -47,6 +48,11 @@ input,
 select,
 textarea {
     font: inherit
+}
+
+:focus-visible {
+    outline: 3px solid var(--green);
+    outline-offset: 3px
 }
 
 .container {
@@ -1693,7 +1699,7 @@ textarea {
     }
 }
 
-@media(max-width:800px) {
+@media(max-width:1023px) {
     .tech-header {
         grid-template-columns: 1fr;
         gap: 18px;
@@ -1748,14 +1754,20 @@ textarea {
         left: 0;
         right: 0;
         background: var(--navy);
-        display: none;
+        display: flex;
         flex-direction: column;
         padding: 15px 20px;
-        border-top: 1px solid rgba(255, 255, 255, .1)
+        border-top: 1px solid rgba(255, 255, 255, .1);
+        visibility: hidden;
+        opacity: 0;
+        transform: translateY(-8px);
+        transition: opacity .2s ease, transform .2s ease, visibility .2s ease
     }
 
     .main-nav.open {
-        display: flex
+        visibility: visible;
+        opacity: 1;
+        transform: translateY(0)
     }
 
     .main-nav a {
@@ -1771,7 +1783,7 @@ textarea {
     }
 
     .hero {
-        min-height: 760px;
+        min-height: 0;
     }
 
     .hero-media img {
@@ -1779,7 +1791,7 @@ textarea {
     }
 
     .hero-content {
-        min-height: 760px;
+        min-height: 0;
         padding-top: 78px;
         padding-bottom: 30px;
     }
@@ -1911,7 +1923,8 @@ textarea {
     }
 
     .contact-image {
-        min-height: 400px
+        min-height: 400px;
+        height: 55vw
     }
 
     .footer-grid {
@@ -1921,6 +1934,15 @@ textarea {
     .footer-bottom {
         flex-direction: column;
         gap: 10px
+    }
+
+    .service {
+        min-height: 0
+    }
+
+    .service-inner {
+        padding-top: 65px;
+        padding-bottom: 65px
     }
 }
 
@@ -1972,11 +1994,11 @@ textarea {
     }
 
     .hero {
-        min-height: 850px;
+        min-height: 0;
     }
 
     .hero-content {
-        min-height: 850px;
+        min-height: 0;
         padding-top: 65px;
         padding-bottom: 25px;
     }
@@ -1987,7 +2009,7 @@ textarea {
     }
 
     .hero h1 {
-        font-size: 43px;
+        font-size: clamp(35px, 11vw, 43px);
         line-height: .98;
         letter-spacing: -.04em;
     }
@@ -2073,5 +2095,27 @@ textarea {
 
     .contact-image-overlay strong {
         font-size: 40px
+    }
+
+    .forest-panel {
+        min-height: 320px;
+        padding: 28px
+    }
+
+    .product-body {
+        padding: 22px
+    }
+
+    .service-inner {
+        padding-top: 55px;
+        padding-bottom: 55px
+    }
+
+    .service-items {
+        grid-template-columns: 1fr
+    }
+
+    .service-item {
+        min-height: 205px
     }
 }
